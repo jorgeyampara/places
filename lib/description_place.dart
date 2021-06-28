@@ -3,7 +3,11 @@ import 'package:flutter/material.dart';
 
 class DescriptionPlace extends StatelessWidget{
   //variables
+  String textoTitulo;
+  int cantidadEstreellas;
+  String textoDescripcion;
 
+  DescriptionPlace(this.textoDescripcion,this.textoTitulo,this.cantidadEstreellas);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +16,7 @@ class DescriptionPlace extends StatelessWidget{
         right: 18,
       ),
       child: Text(
-        "Duwili Ella",
+        textoTitulo,
             style: TextStyle(
           fontSize: 40,
               fontWeight: FontWeight.bold
@@ -39,17 +43,19 @@ class DescriptionPlace extends StatelessWidget{
 
 
     );
+   //fila estrellas
+    List<Container> estrellas = new List();
+    for(int i=0; i<5; i++){
+      if(i<cantidadEstreellas){
+        estrellas.add(estrella);
+      }
+      else{
+        estrellas.add(estrellaBorde);
 
+      }
+    }
     final filaEstrellas = Row(
-      children: <Widget>[
-        estrella,
-        estrella,
-        estrella,
-        estrella,
-        estrella,
-      ],
-
-
+      children: estrellas
     );
 
     final filaTitulo = Row(
@@ -65,8 +71,8 @@ class DescriptionPlace extends StatelessWidget{
         top: 10
       ),
       child: Text(
-        "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
-      style: TextStyle(
+        textoDescripcion,
+        style: TextStyle(
           color: Colors.black54,
       ),
       ),
