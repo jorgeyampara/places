@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:hikeplaces/review.dart';
 
 import 'description_place.dart';
 
@@ -18,6 +19,17 @@ class MyHome extends StatelessWidget{
 
     );
 
+    final review = Container(
+      margin: EdgeInsets.only(
+        top: 300,
+        left: 20,
+        right: 20,
+      ),
+      height: 80,
+      child: Review("assets/images/foto.jpg","Laura Torrez","1 review-4 fotos",4,"muy buen lugar para visitar"),
+
+    );
+
 
     return Scaffold(
       appBar: AppBar(
@@ -25,7 +37,8 @@ class MyHome extends StatelessWidget{
       ),
       body: Stack(
         children: <Widget>[
-          descriptionPlace,
+
+          review,
 
         ],
       )
