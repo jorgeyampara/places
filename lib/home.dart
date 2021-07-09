@@ -10,24 +10,42 @@ class MyHome extends StatelessWidget{
   Widget build(BuildContext context){
     final descriptionPlace = Container(
     margin: EdgeInsets.only(
-      top: 250,
+      top: 200,
       left: 20,
       right: 20,
     ),
-    child: DescriptionPlace("It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the ","Uyuni",4),
+    child: DescriptionPlace("It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default  ","Uyuni",4),
 
 
     );
 
+
     final review = Container(
       margin: EdgeInsets.only(
-        top: 300,
+        top: 500,
         left: 20,
         right: 20,
       ),
       height: 80,
       child: Review("assets/images/foto.jpg","Laura Torrez","1 review-4 fotos",4,"muy buen lugar para visitar"),
 
+    );
+    final boton = Container(
+      margin: EdgeInsets.only(
+        top: 430,
+        left: 20,
+        right: 20,
+      ),
+      child: MaterialButton(
+        minWidth: 200,
+        height: 50,
+        onPressed: () {},
+        color: Colors.blueAccent,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30),
+        ),
+        child: Text('Navigate', style: TextStyle(color: Colors.white)),
+      ),
     );
 
 
@@ -38,6 +56,8 @@ class MyHome extends StatelessWidget{
       body: Stack(
         children: <Widget>[
 
+          descriptionPlace,
+          boton,
           review,
 
         ],
