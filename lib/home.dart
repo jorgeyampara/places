@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:hikeplaces/card_image.dart';
 import 'package:hikeplaces/gradient_back.dart';
+import 'package:hikeplaces/home_app_Bar.dart';
 import 'package:hikeplaces/review.dart';
 import 'package:hikeplaces/review_list.dart';
 
@@ -62,6 +64,8 @@ class MyHome extends StatelessWidget{
 
         children: <Widget>[
           GradientBack(),
+          HomeAppBar("Popular"),
+          CardImage("assets/image/SalarUyuni.jpg"),
           listView,
 
 
