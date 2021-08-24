@@ -63,11 +63,8 @@ class MyHome extends StatelessWidget{
       body: Stack(
 
         children: <Widget>[
-          GradientBack(),
-          HomeAppBar("Popular"),
-          CardImage("assets/image/SalarUyuni.jpg"),
           listView,
-
+          HomeAppBar("Popular")
 
         ],
       )
