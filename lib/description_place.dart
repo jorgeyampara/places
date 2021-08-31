@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:hikeplaces/rounded_button.dart';
 
 // ignore: must_be_immutable
 class DescriptionPlace extends StatelessWidget{
@@ -82,9 +83,11 @@ class DescriptionPlace extends StatelessWidget{
     );
 
     final descriptionPlace = Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         filaTitulo,
         descripcion,
+        RoundedButton("Navigate")
       ],
     );
     return descriptionPlace;
